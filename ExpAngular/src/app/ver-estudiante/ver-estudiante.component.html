@@ -1,0 +1,42 @@
+<div class="row" *ngIf="!photo; else main_content " >
+    <h2> Cargando.. </h2>
+</div>
+
+<h2>Editar Estudiantes </h2>
+
+<ng-template #main_content>
+    <div class="row" >
+        <div class="col-md-5">
+            <div class="card" id="img" >
+                <img [src]="'http://localhost:3000/'+ photo.imagePath" class="img-fluid" alt="">
+            </div>
+        </div>
+        <div class="col-md-7" >
+            <div class="card" id="put">
+                <div class="card-body">
+                    <form  (ngSubmit)="actualizar(nombre, apellido, email, passw)" >
+                        <div class="form-group"  >
+                            <input type="text" class="form-control" #nombre  placeholder="Nombre" [value]="photo.nombre"  >
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" #apellido placeholder="Apellido" [value]="photo.apellido"  >
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" #email placeholder="Email" [value]="photo.email"  >
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" #passw placeholder="Contraseña" [value]="photo.passw"  >
+                        </div>
+    
+                        <button class="btn btn-primary btn-block" >
+                            Actualizar
+                        </button>
+                    </form>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-danger " id="delet" (click)="eliminar(photo._id)"   > Eliminar </button>
+</ng-template>

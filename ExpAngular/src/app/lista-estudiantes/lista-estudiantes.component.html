@@ -1,0 +1,25 @@
+<h2> Lista Estudiantes </h2>
+<div class="row">
+    <div class="col-md-4 p-4" *ngFor="let est of estud" >
+        <div class="card card-photo " (click)="selectEst(est._id)" >
+        
+           <img [src]="'http://localhost:3000/'+ est.imagePath" class="img-card-top w-100">
+            <div class="card-body">
+                <label class="font-weight-bold" for=""> Estudiante:    </label>
+                {{est.nombre}}
+                {{est.apellido}}
+                <br>
+                <label class="font-weight-bold" for=""> Email:  </label>
+                 {{est.email}} 
+               <br>
+               <label class="font-weight-bold" for=""> Contraseña: </label>
+                {{est.passw}} 
+                  
+            </div>
+
+            <div class="card-footer">
+                
+            </div>
+        </div>
+    </div>
+</div>

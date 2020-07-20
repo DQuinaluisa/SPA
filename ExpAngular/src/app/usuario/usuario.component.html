@@ -1,0 +1,34 @@
+<h1>Registro</h1>
+<div class="card" style="width: 18rem;">
+ 
+  <div class="card-body">
+      
+
+    <label >Nombre </label>
+    <input type="text" [(ngModel)]="nombre" class="form-control" 
+      required autofocus >
+
+    <label >Apellido </label>
+    <input type="text" [(ngModel)]="apellido" class="form-control" 
+    required autofocus  >
+
+            <label >Nickname </label>
+            <input type="text" [(ngModel)]="nickname" class="form-control" 
+            required autofocus
+             >
+            
+            
+             <label >Email </label>
+             <input type="text" [(ngModel)]="email" class="form-control" 
+             required autofocus         >
+            
+         
+          
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password"  [(ngModel)]="passw"  (keydown)="ingresar($event)" routerLink="/login" class="form-control" id="exampleInputPassword1">
+     
+          <br>
+
+          <button type="button" class="btn btn-primary btn-sm btn-block " routerLink="/login" (click)="pass()"  >Registrarse</button>
+
+   

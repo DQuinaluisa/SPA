@@ -1,0 +1,27 @@
+
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">ESTUDIANTES</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/lista-estudiantes" >Lista Estudiantes <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/estudiantes">Crear Estudiante </a>
+        </li>
+        <li class="nav-item"  >
+          <a class="nav-link" routerLink="/login" >Login</a>
+        </li>
+        <li class="nav-item"  >
+          <a class="nav-link"  (click)="prueba()" routerLink="/login" >Salir</a>
+        </li>
+      </ul>
+      
+    </div>
+    </div>
+  </nav>
+<router-outlet></router-outlet>
